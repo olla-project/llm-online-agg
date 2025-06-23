@@ -1,0 +1,7 @@
+kafka_2.13-4.0.0/
+logs/
+plot/
+nn_finetune/
+*.sh
+
+**/__pycache__/

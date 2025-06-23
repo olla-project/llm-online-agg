@@ -1,0 +1,32 @@
+
+model_list:
+  - model_name: /fs/fast/u20247643/hf/models/Qwen2.5-7B-Instruct
+    litellm_params:
+      model: openai//fs/fast/u20247643/hf/models/Qwen2.5-7B-Instruct
+      api_base: http://localhost:9991/v1  # 第一个 vLLM 实例
+      api_key: "any"  # 必填字段，vllm 并不实际验证这个
+      rpm: 20000
+
+  - model_name: /fs/fast/u20247643/hf/models/Qwen2.5-7B-Instruct
+    litellm_params:
+      model: openai//fs/fast/u20247643/hf/models/Qwen2.5-7B-Instruct
+      api_base: http://localhost:9992/v1  # 第二个 vLLM 实例
+      api_key: "any"
+      rpm: 20000
+
+  - model_name: /fs/fast/u20247643/hf/models/Qwen2.5-7B-Instruct
+    litellm_params:
+      model: openai//fs/fast/u20247643/hf/models/Qwen2.5-7B-Instruct
+      api_base: http://localhost:9993/v1  # 第三个 vLLM 实例
+      api_key: "any"
+      rpm: 20000
+
+  - model_name: /fs/fast/u20247643/hf/models/Qwen2.5-7B-Instruct
+    litellm_params:
+      model: openai//fs/fast/u20247643/hf/models/Qwen2.5-7B-Instruct
+      api_base: http://localhost:9994/v1  # 第四个 vLLM 实例
+      api_key: "any"
+      rpm: 20000
+
+# router:
+#   strategy: simple-shuffle  # 支持 round_robin, least_requests 等
